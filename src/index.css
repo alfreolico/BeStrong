@@ -1,0 +1,113 @@
+
+/* App.css */
+
+/* Base Styles */
+body {
+  font-family: 'Lobster', cursive;
+  background-color: #fff1f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  padding: 1rem;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('path_to_hero_background.jpg') no-repeat center/cover;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero h1 {
+  color: #ff6b81;
+  font-size: 3rem;
+}
+.cta-button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+
+/* Details Section */
+.details {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #ffe0e8;
+}
+.plan {
+  margin: 1rem;
+}
+.icon {
+  color: #ff758c;
+  font-size: 2rem;
+}
+
+/* Gallery */
+.gallery {
+  background: #ffcad4;
+  padding: 2rem;
+  text-align: center;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+.image-item {
+  background: pink;
+  height: 150px;
+}
+
+/* Contact */
+.contact {
+  background: #ffc1cc;
+  padding: 2rem 1rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 2px solid #ff758c;
+  border-radius: 5px;
+}
+.contact-form button {
+  background: #ff758c;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #ff758c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
