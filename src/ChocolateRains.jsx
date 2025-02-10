@@ -1,30 +1,28 @@
-import './ChocolateRains.scss';
+import "./ChocolateRains.scss";
+import { FaHeart } from "react-icons/fa";
 
 const ChocolateRains = () => {
   return (
-    <div className='esteselbody'>
-    <div className='midiv' id="chocolate_rains">
-      {Array.from({ length: 50 }).map((_, i) => (
-        <div className= "heart" key={i}>
-          <div className= "ring"></div>
-          <div className= "inner">
-            <div className= "regular">
-              <div className= "movable">
-                <div className= "left"></div>
-                <div className= "right"></div>
+    <div className="container-chocolate">
+      <div className="midiv" id="chocolate_rains">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div className="midiv heart" key={i}>
+            <div className="midiv ring"></div>
+            <div className="midiv inner">
+              <div className="midiv regular">
+                <div className="midiv movable">
+                  <FaHeart className="footer-icon fa-style" />
+                </div>
               </div>
-            </div>
-            <div className= "reverse">
-              <div className= "movable">
-                <div className= "left"></div>
-                <div className= "right"></div>
+              <div className="midiv reverse">
+                <div className="midiv movable">
+                  <FaHeart className="footer-icon fa-style" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-
+        ))}
+      </div>
     </div>
   );
 };
