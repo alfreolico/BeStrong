@@ -7,8 +7,6 @@
 // import { FaPlay, FaPause } from 'react-icons/fa';
 // import { useEffect, useRef } from 'react';
 
-
-
 // const App = () => {
 //   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -87,11 +85,11 @@
 
 // export default App;
 
-
 import React from "react";
 import "./App.css";
 import { FaHeart, FaStar, FaUtensils, FaEnvelope } from "react-icons/fa";
-import ChocolateRains from './ChocolateRains';
+import ChocolateRains from "./ChocolateRains";
+import larolita from "./assets/larolita.mp3";
 
 function App() {
   return (
@@ -103,9 +101,9 @@ function App() {
       <GallerySection />
       <ContactSection />
       <Footer />
-      <audio autoPlay loop>
-        <source src="path_to_your_song.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
+      <audio controls autoPlay loop>
+        <source src={larolita} type="audio/mp3" />
+        Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
   );
@@ -116,10 +114,18 @@ function Header() {
     <header className="header">
       <nav>
         <ul className="nav-menu">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#details">Detalles</a></li>
-          <li><a href="#gallery">Galería</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li>
+            <a href="#hero">Inicio</a>
+          </li>
+          <li>
+            <a href="#details">Detalles</a>
+          </li>
+          <li>
+            <a href="#gallery">Galería</a>
+          </li>
+          <li>
+            <a href="#contact">Contacto</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -127,10 +133,21 @@ function Header() {
 }
 
 function HeroSection() {
+  const mensaje = "Sí quiero ser tu Valentín BB.";
+
+  const abrirWhatsApp = () => {
+    const url = `https://wa.me/+529381448996?text=${encodeURIComponent(
+      mensaje
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <section id="hero" className="hero">
       <h1>¿Serás mi San Valentín?</h1>
-      <button className="cta-button">&#161;Dí que sí!</button>
+      <button className="cta-button" onClick={abrirWhatsApp}>
+        ¡Dí que sí!
+      </button>
     </section>
   );
 }
@@ -185,7 +202,9 @@ function ContactSection() {
 function Footer() {
   return (
     <footer className="footer">
-      <p>Hecho con <FaHeart className="footer-icon" /> para ti</p>
+      <p>
+        Hecho con <FaHeart className="footer-icon" /> para ti
+      </p>
       <p>&copy; 2025 Derechos reservados</p>
     </footer>
   );
