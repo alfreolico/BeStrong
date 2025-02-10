@@ -99,7 +99,7 @@ function App() {
       <HeroSection />
       <DetailsSection />
       <GallerySection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <Footer />
       <audio controls autoPlay loop>
         <source src={larolita} type="audio/mp3" />
@@ -123,9 +123,9 @@ function Header() {
           <li>
             <a href="#gallery">Galería</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#contact">Contacto</a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
@@ -136,7 +136,7 @@ function HeroSection() {
   const mensaje = "Sí quiero ser tu Valentín BB.";
 
   const abrirWhatsApp = () => {
-    const url = `https://wa.me/+529381448996?text=${encodeURIComponent(
+    const url = `https://wa.me/+529381017655?text=${encodeURIComponent(
       mensaje
     )}`;
     window.open(url, "_blank");
@@ -185,19 +185,19 @@ function GallerySection() {
   );
 }
 
-function ContactSection() {
-  return (
-    <section id="contact" className="contact">
-      <h2>Contacto</h2>
-      <form className="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <textarea placeholder="Tu mensaje personalizado" required></textarea>
-        <button type="submit">Enviar mi mensaje de amor</button>
-      </form>
-    </section>
-  );
-}
+// function ContactSection() {
+//   return (
+//     <section id="contact" className="contact">
+//       <h2>Contacto</h2>
+//       <form className="contact-form">
+//         <input type="text" placeholder="Nombre" required />
+//         <input type="email" placeholder="Correo electrónico" required />
+//         <textarea placeholder="Tu mensaje personalizado" required></textarea>
+//         <button type="submit">Enviar mi mensaje de amor</button>
+//       </form>
+//     </section>
+//   );
+// }
 
 function Footer() {
   return (
