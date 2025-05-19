@@ -48,7 +48,8 @@ function Header() {
 }
 
 function HeroSection() {
-	const mensaje = 'Sí quiero ser tu Valentín BB.';
+	const mensaje =
+		'Me encantaría tener mi propia pagina de san valentin, Podrias Cotizarme una?';
 
 	const abrirWhatsApp = () => {
 		const url = `https://wa.me/+529381448996?text=${encodeURIComponent(
@@ -59,7 +60,7 @@ function HeroSection() {
 
 	return (
 		<section id="hero" className="hero">
-			<h1>Me encataria tener mi propia pagina de SAN VALENTIN</h1>
+			<h1>¿Serás mi San Valentín?</h1>
 			<button className="cta-button" onClick={abrirWhatsApp}>
 				¡Dí que sí!
 			</button>
